@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <!-- JS -->
   <script src="js/scrollReveal.js"></script>
   <script src="js/jquery-1.11.2.min.js"></script>
@@ -49,9 +50,91 @@
       }
     }
   </style>
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Escolha um código de país';
+    window.LOCALE = 'pt';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "A informação fornecida não é valida. Verifique o formato do campo e tente novamente.";
+
+    window.REQUIRED_ERROR_MESSAGE = "Este campo não pode ser deixado em branco. ";
+
+    window.GENERIC_INVALID_MESSAGE = "A informação fornecida não é valida. Verifique o formato do campo e tente novamente.";
+
+
+
+
+    window.translation = {
+      common: {
+        selectedList: '{quantity} lista selecionada',
+        selectedLists: '{quantity} listas selecionadas',
+        selectedOption: '{quantity} selecionado',
+        selectedOptions: '{quantity} selecionados',
+      }
+    };
+
+    var AUTOHIDE = Boolean(0);
+    
+  </script>
+
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
 </head>
 
 <body>
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <div id="error-message" class="sib-form-message-panel"
+        style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+            <path
+              d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+          </svg>
+          <span class="sib-form-message-panel__inner-text">
+            Sua assinatura não pôde ser validada.
+          </span>
+        </div>
+      </div>
+      <div></div>
+      <div id="success-message" class="sib-form-message-panel"
+        style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+            <path
+              d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+          </svg>
+          <span class="sib-form-message-panel__inner-text">
+            Você fez sua assinatura com sucesso.
+          </span>
+        </div>
+      </div>
+      <span class="popup-close" id="popupClose">&times;</span>
+      <div class="popup-image" style="background-image: url('images/Google-Maps-box.png');">
+        <!-- Substitua o URL acima pela sua imagem -->
+      </div>
+
+      <div class="popup-text">
+        <h2>Baixe Agora o Guia Google Maps!</h2>
+        <p>Modifique, traduza e revenda como seu. Comece a faturar hoje nas maiores plataformas: Hotmart, Eduzz e
+          Mercado Livre.</p>
+
+        <form method="POST"
+          action="https://sibforms.com/serve/MUIFAL32GAHE2Q_WjBqz3CITiFg3tpOWfpJeXnoa1bnTQ5qiyEXtL-RGjxK5B9LEhU5CJ8JTtLxmH8syLTGygUtrYc0CLfUDZV0ExEjRkY_0nITB-yrK8wIPmzeDZ5qwPQILLae85QcGOmuOJl7_jJaMQXdM6gZQfV4IWD8QG8wwHp02ZHDzUxtQlzT1Hj5SczBStvhCt6xyLrOa"
+          data-type="subscription">
+
+          <input type="email" name="EMAIL" placeholder="Digite seu e-mail" class="form-input" required>
+
+          <button type="submit" class="form-button">
+            Baixar Agora Grátis
+          </button>
+        </form>
+        <p class="form-note">
+          Não perca tempo! Baixe, personalize e comece a vender ainda hoje.
+        </p>
+      </div>
+
+     
+    </div>
+  </div>
   <!-- header -->
   <div class="full-width full-width-background1 header" style="background-color: #3c9a64;">
     <div class="container">
@@ -60,8 +143,9 @@
           <img src="images/logo3.png" width="200" align="center" class="logo" alt="Evergreen Vlogging">
           <p
             style="text-align: center; color: #ffffff; padding:5px; font-size: 19px; background-color: #609c88; width: 85%; border-radius: 40px 0 40px 0;">
-           Infoproduto Lucrativo: Venda Este Guia do Google Maps e Ganhe em Dobro</p>
-          <h1 style="color: #ffffff; font-weight: 600;">Este produto vem com direitos de revenda master , permitindo que você revenda o guia e  </h1>
+            Infoproduto Lucrativo: Venda Este Guia do Google Maps e Ganhe em Dobro</p>
+          <h1 style="color: #ffffff; font-weight: 600;">Este produto vem com direitos de revenda master , permitindo que
+            você revenda o guia e </h1>
           <h1 style="color: #ffffff; font-weight: 600; margin-top: -10px;">fique com 100% dos lucros.</h1>
           <div class="row">
             <div class="col-md-6">
@@ -75,18 +159,180 @@
               </center>
             </div>
             <div class="col-md-6">
-              <ul class="list-icon-1">
+              <!-- <ul class="list-icon-1">
                 <li><i class="fas fa-map-marker-alt mr-3"></i> O Google impulsionou as listagens no Maps porque é
                   exatamente onde as pessoas estão buscando negócios como o seu.</li>
                 <li><i class="fas fa-map-marker-alt mr-3"></i> Alguns dos negócios mais bem-sucedidos hoje estão
                   dominando o Google Maps e nem estão pagando por anúncios.</li>
                 <li><i class="fas fa-map-marker-alt mr-3"></i> Quando sua empresa começar a aparecer no Google Maps, a
                   visibilidade cresce e os clientes começam a chegar em efeito cascata.</li>
-              </ul>
+              </ul> -->
+              <!-- Begin Brevo Form -->
+              <!-- START - We recommend to place the below code in head tag of your website html  -->
+
+              <!--  END - We recommend to place the above code in head tag of your website html -->
+
+              <!-- START - We recommend to place the below code where you want the form in your website html  -->
+              <!-- <div class="sib-form" style="text-align: center;
+         background-color: transparent;                                 ">
+                <div id="sib-form-container" class="sib-form-container">
+                  <div id="error-message" class="sib-form-message-panel"
+                    style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                      <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                        <path
+                          d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                      </svg>
+                      <span class="sib-form-message-panel__inner-text">
+                        Sua assinatura não pôde ser validada.
+                      </span>
+                    </div>
+                  </div>
+                  <div></div>
+                  <div id="success-message" class="sib-form-message-panel"
+                    style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                      <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                        <path
+                          d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                      </svg>
+                      <span class="sib-form-message-panel__inner-text">
+                        Você fez sua assinatura com sucesso.
+                      </span>
+                    </div>
+                  </div>
+                  <div></div>
+                  <div id="sib-container" class="sib-container--large sib-container--vertical"
+                    style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+                    <form id="sib-form" method="POST"
+                      action="https://sibforms.com/serve/MUIFAL32GAHE2Q_WjBqz3CITiFg3tpOWfpJeXnoa1bnTQ5qiyEXtL-RGjxK5B9LEhU5CJ8JTtLxmH8syLTGygUtrYc0CLfUDZV0ExEjRkY_0nITB-yrK8wIPmzeDZ5qwPQILLae85QcGOmuOJl7_jJaMQXdM6gZQfV4IWD8QG8wwHp02ZHDzUxtQlzT1Hj5SczBStvhCt6xyLrOa"
+                      data-type="subscription">
+                      <div style="padding: 8px 0;">
+                        <div class="sib-form-block"
+                          style="font-size:32px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                          <p>Lucre com Google Maps Hoje!</p>
+                        </div>
+                      </div>
+                      <div style="padding: 8px 0;">
+                        <div class="sib-form-block"
+                          style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
+                          <div class="sib-text-form-block">
+                            <p><strong>Baixe agora este guia completo sobre Google Maps, modifique, traduza e revenda
+                                como se fosse seu! Com ele, você pode criar um produto digital exclusivo e lucrativo,
+                                pronto para ser comercializado nas maiores plataformas como Hotmart, Eduzz e Mercado
+                                Livre.</strong></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="padding: 8px 0;">
+                        <div class="sib-input sib-form-block">
+                          <div class="form__entry entry_block">
+                            <div class="form__label-row ">
+                              <label class="entry__label"
+                                style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;"
+                                for="EMAIL" data-required="*">Insira seu e-mail para baixa o seu agora.</label>
+
+                              <div class="entry__field">
+                                <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
+                                  placeholder="EMAIL" data-required="true" required />
+                              </div>
+                            </div>
+
+                            <label class="entry__error entry__error--primary"
+                              style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                            </label>
+                            <label class="entry__specification"
+                              style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
+                              Forneça seu e-mail para assinar. Por exemplo: abc@xyz.com
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="padding: 8px 0;">
+                        <div class="sib-form-block" style="text-align: center">
+                          <button class="sib-form-block__button sib-form-block__button-with-loader"
+                            style="font-size:16px; text-align:center; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#e53935; border-radius:3px; border-width:0px;"
+                            form="sib-form" type="submit">
+                            <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                              viewBox="0 0 512 512">
+                              <path
+                                d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                            </svg>
+                            BAIXE AGORA O SEU GRÁTIS
+                          </button>
+                        </div>
+                      </div>
+                      <div style="padding: 8px 0;">
+                        <div class="sib-form-block"
+                          style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#e53935; background-color:transparent; text-align:left">
+                          <p><strong>Não perca tempo!</strong><br>
+                            <strong>Baixe, personalize e comece a vender agora mesmo!</strong>
+                          </p>
+                        </div>
+                      </div>
+
+                      <input type="text" name="email_address_check" value="" class="input--hidden">
+                      <input type="hidden" name="locale" value="pt">
+                    </form>
+                  </div>
+                </div>
+              </div> -->
+              <div class="form-container">
+                <div id="error-message" class="sib-form-message-panel"
+                  style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path
+                        d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">
+                      Sua assinatura não pôde ser validada.
+                    </span>
+                  </div>
+                </div>
+                <div></div>
+                <div id="success-message" class="sib-form-message-panel"
+                  style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path
+                        d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">
+                      Você fez sua assinatura com sucesso.
+                    </span>
+                  </div>
+                </div>
+                <h2 class="form-title">Lucre com Google Maps Hoje!</h2>
+                <p class="form-subtitle">
+                  Baixe agora este guia completo, modifique e revenda como seu! Ganhe dinheiro nas maiores plataformas
+                  como Hotmart, Eduzz e Mercado Livre.
+                </p>
+                <form method="POST"
+                  action="https://sibforms.com/serve/MUIFAL32GAHE2Q_WjBqz3CITiFg3tpOWfpJeXnoa1bnTQ5qiyEXtL-RGjxK5B9LEhU5CJ8JTtLxmH8syLTGygUtrYc0CLfUDZV0ExEjRkY_0nITB-yrK8wIPmzeDZ5qwPQILLae85QcGOmuOJl7_jJaMQXdM6gZQfV4IWD8QG8wwHp02ZHDzUxtQlzT1Hj5SczBStvhCt6xyLrOa"
+                  data-type="subscription">
+
+                  <input type="email" name="EMAIL" placeholder="Digite seu e-mail" class="form-input" required>
+
+                  <button type="submit" class="form-button">
+                    Baixar Agora Grátis
+                  </button>
+                </form>
+                <p class="form-note">
+                  Não perca tempo! Baixe, personalize e comece a vender ainda hoje.
+                </p>
+              </div>
+              <!-- END - We recommend to place the above code where you want the form in your website html  -->
+
+              <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
+
+
+              <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
+              <!-- End Brevo Form -->
             </div>
           </div>
-          <h1 style="margin-bottom: 120px;" align="center"><a href="https://go.hotmart.com/O96028683M?dp=1"><img
-                class="header-buy-button" src="images/buy-button-2.png" width="575" height="135"></a></h1>
+          <!-- <h1 style="margin-bottom: 120px;" align="center"><a href="https://go.hotmart.com/O96028683M?dp=1"><img
+                class="header-buy-button" src="images/buy-button-2.png" width="575" height="135"></a></h1> -->
         </div>
       </div>
     </div>
@@ -120,7 +366,8 @@
             <h1 class="for-mobile" style="font-weight: bolder; font-size: 45px;">Mas você não precisa de milhões </h1>
             <h1 class="for-mobile" style="font-weight: bolder; font-size: 50px; margin-top: unset;"> de clientes <br>
               <span style="color: #609c88;font-size: 43px;"><u>Para ganhar dinheiro com listagens no Google
-                  Maps.</u></span></h1>
+                  Maps.</u></span>
+            </h1>
             <div class="row rw-1" style="padding-top: 0; margin-top: -60px;">
               <div class="col-md-6">
                 <img class="absolute-img" src="images/fail.png" alt="Dear Friend" style="padding-top: 80px;">
@@ -299,7 +546,7 @@
               <p style="text-align: center;">Mas você não precisará investir nem perto disso hoje.</p><br>
               <p style="text-align: center; font-size: 25px; padding-top: 0px; ">Hoje, você pode obter <span
                   style=" font-weight: 800; "> ACESSO INSTANTÂNEO </span> por apenas...</p>
-              <p class="text-center"><a href="#"><img src="images/buy-button-2.png" align="Buy Now"></a></p>
+              <!-- <p class="text-center"><a href="#"><img src="images/buy-button-2.png" align="Buy Now"></a></p> -->
             </div>
             <p class="text-center" style="margin-top: 10px; font-size: 20px; font-weight: bolder;">
               E continua melhorando</p>
@@ -450,9 +697,10 @@
         <div class="row">
           <div class="col-md-10 col-md-offset-1" style=" margin-top: 25px;" align="center">
             <h3 style="font-size: 27px; font-weight: 600; margin-top: -20px;">Clique no botão abaixo agora para obter
-              <span style="font-weight: 800;"> <span style="color: #ff003b;">acesso instantâneo</span></span></h3>
-            <a href="https://go.hotmart.com/O96028683M?dp=1"><img src="images/buy-button-2.png"
-                style="padding-top: 30px;"></a>
+              <span style="font-weight: 800;"> <span style="color: #ff003b;">acesso instantâneo</span></span>
+            </h3>
+            <!-- <a href="https://go.hotmart.com/O96028683M?dp=1"><img src="images/buy-button-2.png"
+                style="padding-top: 30px;"></a> -->
             <p><br></p>
           </div>
           <div class="col-md-10 col-md-offset-1" align="center">
@@ -540,7 +788,7 @@
                 </div>
               </div>
             </div>
-            <a href="https://go.hotmart.com/O96028683M?dp=1"><img src="images/buy-button-2.png" alt="Buy Button"></a>
+            <!-- <a href="https://go.hotmart.com/O96028683M?dp=1"><img src="images/buy-button-2.png" alt="Buy Button"></a> -->
           </div>
         </div>
       </div>
@@ -556,16 +804,16 @@
         <div class="col-md-6" align="center">
           <img src="images/logo3.png" width="200" align="center" class="logo" alt="Evergreen Vlogging">
         </div>
-           <div class="col-md-6" align="center">
-         
-           
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/profile.php?id=61569948285672" target="_blank" class="text-white">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                </li>
-                <!-- <li class="list-inline-item">
+        <div class="col-md-6" align="center">
+
+
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/profile.php?id=61569948285672" target="_blank" class="text-white">
+                <i class="fab fa-facebook"></i> Facebook
+              </a>
+            </li>
+            <!-- <li class="list-inline-item">
                     <a href="https://instagram.com/seuperfil" target="_blank" class="text-white">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
@@ -580,14 +828,14 @@
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
                 </li> -->
-                <li class="list-inline-item">
-                    <a href="https://www.youtube.com/channel/UCe8MWHH3m8CxaW6fhWIKs_w" target="_blank" class="text-white">
-                        <i class="fab fa-youtube"></i> YouTube
-                    </a>
-                </li>
-            </ul>
-        
-        
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/channel/UCe8MWHH3m8CxaW6fhWIKs_w" target="_blank" class="text-white">
+                <i class="fab fa-youtube"></i> YouTube
+              </a>
+            </li>
+          </ul>
+
+
         </div>
       </div>
     </div>
@@ -596,6 +844,14 @@
     jQuery(function ($) {
       window.scrollReveal = new scrollReveal();
     });
+    document.getElementById('popupClose').addEventListener('click', function () {
+      document.getElementById('popup').style.display = 'none';
+    });
+
+    // Fecha o popup automaticamente após 10 segundos
+    // setTimeout(function () {
+    //   document.getElementById('popup').style.display = 'none';
+    // }, 10000);
   </script>
 </body>
 
